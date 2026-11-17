@@ -18,7 +18,7 @@ export const Footer: React.FC = () => {
           <div>
             <RitmikaLogo variant="dark" />
             <p className="mt-4 font-sans text-sm text-[#D5DCE4]">
-              Rítmika Empresarial · Desarrollo Organizacional
+              Rítmika Empresarial · Consultoría exclusiva para PyMEs
             </p>
             <p className="mt-1 font-sans text-xs text-[#D5DCE4]/75">
               {LOCATION_TEXT} · {PHONE_DISPLAY} · {EMAIL_ADDRESS}

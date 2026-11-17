@@ -41,8 +41,8 @@ export const HeroSection: React.FC = () => {
             </h1>
 
             <p className="mt-6 font-sans text-base sm:text-lg lg:text-[19px] leading-relaxed text-[#2B3544]/85 max-w-2xl">
-              Capacitación, desarrollo organizacional y Recursos Humanos para empresas que quieren
-              crecer con orden, claridad y equipos comprometidos.
+              Capacitación, desarrollo organizacional y Recursos Humanos exclusivamente para PyMEs
+              que quieren crecer con orden, claridad y equipos comprometidos.
             </p>
 
             {/* Botones de acción */}
@@ -69,7 +69,7 @@ export const HeroSection: React.FC = () => {
             <div className="mt-8 pt-6 border-t border-[#2B3544]/10 flex flex-wrap items-center gap-x-4 gap-y-2 text-xs sm:text-sm font-medium text-[#2B3544]/75">
               <span>{LOCATION_TEXT}</span>
               <span aria-hidden="true">·</span>
-              <span>PyMEs e industria automotriz</span>
+              <span>Exclusivo para PyMEs · Enfoque en manufactura</span>
               <span aria-hidden="true">·</span>
               <span>Intervenciones a la medida</span>
             </div>

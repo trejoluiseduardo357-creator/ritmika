@@ -88,11 +88,11 @@ export const TeamSection: React.FC = () => {
             eyebrow="NUESTRO EQUIPO"
             titleBefore="Consultoría cercana,"
             titleItalic="experiencia probada."
-            subtitle="Combinamos trayectoria en la industria automotriz, psicología organizacional y sistemas de gestión para PyMEs."
+            subtitle="Combinamos trayectoria en el sector de manufactura y psicología organizacional con enfoque exclusivo en PyMEs."
           />
         </Reveal>
 
-        <div className="mt-12 sm:mt-14 grid grid-cols-1 md:grid-cols-3 gap-7">
+        <div className="mt-12 sm:mt-14 grid grid-cols-1 md:grid-cols-2 gap-7 max-w-4xl mx-auto">
           {TEAM_MEMBERS.map((member, idx) => (
             <Reveal key={member.id} delay={idx * 0.08} className="h-full">
               <article className="h-full bg-[#FFFDF8] rounded-2xl p-8 shadow-[0_12px_32px_rgba(43,53,68,0.07)] border border-[#2B3544]/8 flex flex-col text-center">

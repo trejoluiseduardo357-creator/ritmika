@@ -303,24 +303,16 @@ export const TEAM_MEMBERS: TeamMember[] = [
     name: 'Cecilia Cueva',
     initials: 'CC',
     role: 'Líder de proyectos y especialista en Recursos Humanos',
-    bio: 'Más de 7 años en el sector industrial y automotriz (Kasai, DENSO, Michelin): capacitación y desarrollo, gestión de talento, onboarding, desarrollo de líderes y gestión del cambio.',
-    specialties: ['Sector automotriz e industrial', 'Gestión de talento', 'Desarrollo de líderes'],
+    bio: 'Más de 7 años en el sector industrial y de manufactura, en empresas como Kasai, DENSO y Michelin: capacitación y desarrollo, gestión de talento, onboarding, desarrollo de líderes y gestión del cambio.',
+    specialties: ['Sector de manufactura', 'Gestión de talento', 'Desarrollo de líderes'],
   },
   {
     id: 'luis',
     name: 'Luis Trejo',
     initials: 'LT',
     role: 'Psicólogo organizacional e instructor de capacitación',
-    bio: 'Especialista en clima laboral, implementación de la NOM-035, diseño de programas de formación a la medida y desarrollo de equipos de alto desempeño.',
+    bio: 'Especialista en clima laboral, implementación de la NOM-035, diseño de programas de formación a la medida y desarrollo de equipos de alto desempeño en PyMEs.',
     specialties: ['Clima laboral y NOM-035', 'Formación de equipos', 'Psicología organizacional'],
-  },
-  {
-    id: 'abraham',
-    name: 'Abraham Borja',
-    initials: 'AB',
-    role: 'Consultoría en desarrollo y transformación organizacional',
-    bio: 'Acompaña a empresas en el diseño de sistemas de gestión, estructura, mapeo de procesos y fortalecimiento de cultura organizacional en PyMEs.',
-    specialties: ['Sistemas de gestión', 'Estructura y procesos', 'Cultura en PyMEs'],
   },
 ];
 

@@ -63,7 +63,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onSelectServic
             eyebrow="LO QUE HACEMOS"
             titleBefore="Soluciones para"
             titleItalic="cada etapa de tu empresa."
-            subtitle="Acompañamos desde intervenciones puntuales de formación hasta la estructuración integral de tu área de Recursos Humanos."
+            subtitle="Consultoría exclusiva para PyMEs: acompañamos desde intervenciones puntuales de formación hasta la estructuración integral de tu área de Recursos Humanos."
           />
         </Reveal>
 

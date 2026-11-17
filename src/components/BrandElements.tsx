@@ -321,12 +321,16 @@ export const RedCircleArrow: React.FC<RedCircleArrowProps> = ({
 interface WhatsAppPostBoxProps {
   subtitle?: string;
   className?: string;
+  layout?: 'row' | 'stacked';
 }
 
 export const WhatsAppPostBox: React.FC<WhatsAppPostBoxProps> = ({
   subtitle = 'Respuesta directa para agendar diagnóstico o resolver dudas',
   className = '',
+  layout = 'row',
 }) => {
+  const isStacked = layout === 'stacked';
+
   return (
     <a
       href={WHATSAPP_URL}
@@ -334,8 +338,14 @@ export const WhatsAppPostBox: React.FC<WhatsAppPostBoxProps> = ({
       rel="noopener noreferrer"
       className={`group block bg-[#2B3544] text-[#FFFDF8] rounded-2xl px-6 py-6 sm:px-8 sm:py-7 shadow-[0_12px_30px_rgba(43,53,68,0.16)] transition-transform duration-200 hover:-translate-y-0.5 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#F29400] ${className}`}
     >
-      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-        <div>
+      <div
+        className={
+          isStacked
+            ? 'flex flex-col gap-5'
+            : 'flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4'
+        }
+      >
+        <div className="w-full">
           <span className="block font-sans text-[11px] font-bold uppercase tracking-[0.2em] text-[#F29400] mb-1">
             CONTACTO DIRECTO
           </span>
@@ -347,7 +357,13 @@ export const WhatsAppPostBox: React.FC<WhatsAppPostBoxProps> = ({
           </span>
         </div>
 
-        <div className="flex items-center gap-4 shrink-0">
+        <div
+          className={
+            isStacked
+              ? 'flex items-center justify-between gap-4 pt-4 border-t border-[#FFFDF8]/12 w-full'
+              : 'flex items-center gap-4 shrink-0'
+          }
+        >
           <span className="font-serif font-extrabold text-2xl sm:text-3xl lg:text-[34px] text-[#FFFDF8] tabular-nums tracking-tight whitespace-nowrap">
             {WHATSAPP_NUMBER_DISPLAY}
           </span>

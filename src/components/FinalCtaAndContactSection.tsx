@@ -144,8 +144,8 @@ export const FinalCtaAndContactSection: React.FC<FinalCtaAndContactProps> = ({
               <em className="italic font-extrabold text-[#F29400]">diseñar en conjunto?</em>
             </h2>
             <p className="mt-5 font-sans text-base sm:text-lg text-[#E4E9F0] max-w-2xl mx-auto leading-relaxed">
-              Conversemos sin compromiso sobre los retos actuales de tu organización y tracemos una
-              ruta clara para tu equipo.
+              Conversemos sin compromiso sobre los retos actuales de tu PyME y tracemos una ruta
+              clara para tu equipo.
             </p>
 
             <div className="mt-9 flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -191,7 +191,10 @@ export const FinalCtaAndContactSection: React.FC<FinalCtaAndContactProps> = ({
           <div className="mt-12 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
             {/* Columna izquierda: datos directos */}
             <Reveal delay={0.05} className="lg:col-span-5 space-y-6">
-              <WhatsAppPostBox subtitle="Atención directa en León y Bajío" />
+              <WhatsAppPostBox
+                layout="stacked"
+                subtitle="Atención directa en León y Bajío"
+              />
 
               <div className="bg-[#FFFDF8] rounded-2xl p-7 sm:p-8 shadow-[0_10px_28px_rgba(43,53,68,0.06)] border border-[#2B3544]/8 space-y-5">
                 <h3 className="font-serif font-extrabold text-xl text-[#2B3544]">

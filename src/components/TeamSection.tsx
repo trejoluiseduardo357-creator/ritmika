@@ -1,25 +1,24 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { TEAM_MEMBERS } from '../data/ritmikaData';
 import { Reveal, SectionHeading, TricolorStrip } from './BrandElements';
 
 interface AvatarRingProps {
   initials: string;
   name: string;
+  photoFile: string;
 }
 
-const MulticolorAvatarPlaceholder: React.FC<AvatarRingProps> = ({ initials, name }) => {
+const MulticolorAvatarPhoto: React.FC<AvatarRingProps> = ({ initials, name, photoFile }) => {
+  const [imgError, setImgError] = useState(false);
+
   return (
-    <div
-      className="relative w-28 h-28 mx-auto flex items-center justify-center"
-      role="img"
-      aria-label={`Avatar editorial de ${name}`}
-    >
+    <div className="relative w-36 h-36 mx-auto flex items-center justify-center">
       {/* Anillo de cinta multicolor SVG */}
       <svg
         viewBox="0 0 120 120"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        className="absolute inset-0 w-full h-full"
+        className="absolute inset-0 w-full h-full pointer-events-none"
         aria-hidden="true"
       >
         {/* Naranja */}
@@ -57,7 +56,7 @@ const MulticolorAvatarPlaceholder: React.FC<AvatarRingProps> = ({ initials, name
           strokeWidth="5"
           strokeLinecap="round"
         />
-        {/* Anillo interior ondulado sutil */}
+        {/* Anillo interior sutil */}
         <circle
           cx="60"
           cy="60"
@@ -69,11 +68,21 @@ const MulticolorAvatarPlaceholder: React.FC<AvatarRingProps> = ({ initials, name
         />
       </svg>
 
-      {/* Círculo interior editorial */}
-      <div className="w-[88px] h-[88px] rounded-full bg-[#FCF4E6] border border-[#2B3544]/10 flex flex-col items-center justify-center shadow-inner">
-        <span className="font-serif font-extrabold text-2xl text-[#2B3544] tracking-tight">
-          {initials}
-        </span>
+      {/* Foto circular centrada arriba */}
+      <div className="w-[114px] h-[114px] rounded-full overflow-hidden bg-[#FCF4E6] border border-[#2B3544]/10 flex items-center justify-center shadow-inner">
+        {!imgError ? (
+          <img
+            src={`${import.meta.env.BASE_URL}${photoFile}`}
+            alt={`Foto de ${name}`}
+            referrerPolicy="no-referrer"
+            onError={() => setImgError(true)}
+            className="w-full h-full object-cover object-top"
+          />
+        ) : (
+          <span className="font-serif font-extrabold text-2xl text-[#2B3544] tracking-tight">
+            {initials}
+          </span>
+        )}
       </div>
     </div>
   );
@@ -96,7 +105,11 @@ export const TeamSection: React.FC = () => {
           {TEAM_MEMBERS.map((member, idx) => (
             <Reveal key={member.id} delay={idx * 0.08} className="h-full">
               <article className="h-full bg-[#FFFDF8] rounded-2xl p-8 shadow-[0_12px_32px_rgba(43,53,68,0.07)] border border-[#2B3544]/8 flex flex-col text-center">
-                <MulticolorAvatarPlaceholder initials={member.initials} name={member.name} />
+                <MulticolorAvatarPhoto
+                  initials={member.initials}
+                  name={member.name}
+                  photoFile={member.photoFile}
+                />
 
                 <h3 className="mt-6 font-serif font-extrabold text-2xl text-[#2B3544]">
                   {member.name}

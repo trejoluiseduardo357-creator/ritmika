@@ -51,6 +51,7 @@ export interface TeamMember {
   id: string;
   name: string;
   initials: string;
+  photoFile: string;
   role: string;
   bio: string;
   specialties: string[];
@@ -302,6 +303,7 @@ export const TEAM_MEMBERS: TeamMember[] = [
     id: 'cecilia',
     name: 'Cecilia Cueva',
     initials: 'CC',
+    photoFile: 'team/cecilia-cueva.jpg',
     role: 'Líder de proyectos y especialista en Recursos Humanos',
     bio: 'Más de 7 años en el sector industrial y de manufactura, en empresas como Kasai, DENSO y Michelin: capacitación y desarrollo, gestión de talento, onboarding, desarrollo de líderes y gestión del cambio.',
     specialties: ['Sector de manufactura', 'Gestión de talento', 'Desarrollo de líderes'],
@@ -310,6 +312,7 @@ export const TEAM_MEMBERS: TeamMember[] = [
     id: 'luis',
     name: 'Luis Trejo',
     initials: 'LT',
+    photoFile: 'team/luis-trejo.jpg',
     role: 'Psicólogo organizacional e instructor de capacitación',
     bio: 'Especialista en clima laboral, implementación de la NOM-035, diseño de programas de formación a la medida y desarrollo de equipos de alto desempeño en PyMEs.',
     specialties: ['Clima laboral y NOM-035', 'Formación de equipos', 'Psicología organizacional'],
